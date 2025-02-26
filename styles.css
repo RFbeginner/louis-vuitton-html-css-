@@ -42,10 +42,10 @@ body {
           "slnt" 0;
     }
     /*Titulo e produtos*/
-    .collection h2, .banner-text, .category p, .category1 p, .textserviços h2, .textserviços p, .textserviços a {
+    .collection h2, .collection p, .banner-text, .category p, .category1 p, .textserviços h2, .textserviços p, .textserviços a {
         font-family: "Quicksand", serif;
         font-optical-sizing: auto;
-        font-weight: 450;
+        
         letter-spacing: 0,5px;
         font-style: normal;
         font-variation-settings:
@@ -222,22 +222,28 @@ h5{
 }
 
 .banner-container {
-    position: relative;
     text-align: center; /* Centraliza o texto */
+    position: relative;
+    width: 100%;
+    height: 600px; /* Ajuste a altura conforme necessário */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
     /*texto do banner*/
 .banner-text {
     position: absolute;
-    top: 80%; /* Ajuste conforme necessário */
+    top: 85%; /* Ajuste conforme necessário */
     left: 50%;
     transform: translate(-50%, -50%); /* Centraliza o texto */
     color: white; /* Cor do texto */
     z-index: 1; /* Garante que o texto fique acima da imagem */
-    }
+}
  
 .banner-text p{
     font-size: 10px;
-    font-weight: bold;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -256,13 +262,12 @@ h5{
     }
     /*texto do banner*/
 
-.image-banner {
-    width: 100%;
-    max-width: 100%; /* Set a valid value for max-width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.image-banner img {
+        width: 100%; /* Ocupa toda a largura disponível */
+        height: 100%; /* Faz a imagem cobrir toda a altura */
+        object-fit: cover; /* Mantém a proporção correta sem distorcer */
 }
+
 
 /*categorias*/ 
 
@@ -296,9 +301,18 @@ h5{
 /* Título */
 .collection h2 {
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 500;
     margin-bottom: 30px;
     text-align: center;
+}
+
+.collection p {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /* Grade de categorias */
@@ -315,14 +329,12 @@ h5{
 .category {
     text-align: center;
     width: 280px; /* Tamanho fixo das imagens */
-    
 }
 
 .category img {
     width: 105%;
     height: auto;
-    
-    
+        
 }
 
 /* Estilização do texto abaixo das imagens */
@@ -330,7 +342,43 @@ h5{
     font-size: 14px;
     font-weight: 500;
     margin-top: 10px;
+    
+    
 }
+.product-box {
+    position: relative;
+    width: 270px; /* Tamanho fixo do quadrado */
+    height: 350px; /* Altura proporcional */
+    background: linear-gradient(to top, #ffffff, #dbdbda);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Ícone de favorito */
+.favorite-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(156, 156, 156);
+    transition: 0.3s;
+}
+
+.favorite-icon:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* Ajuste das imagens */
+.product-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 
 /* Serviços */
