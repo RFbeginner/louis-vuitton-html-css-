@@ -35,14 +35,14 @@ body {
       .banner-text h2, .banner-text p, .banner-text a {
         font-family: "Quicksand", serif;
         font-optical-sizing: auto;
-        font-weight: 450;
+        
         letter-spacing: 0,5px;
         font-style: normal;
         font-variation-settings:
           "slnt" 0;
     }
     /*Titulo e produtos*/
-    .collection h2, .collection p, .banner-text, .category p, .category1 p, .textserviços h2, .textserviços p, .textserviços a {
+    .collection h2, .collection p, .category p, .category1 p, .textserviços h2, .textserviços p, .textserviços a {
         font-family: "Quicksand", serif;
         font-optical-sizing: auto;
         
@@ -243,7 +243,7 @@ h5{
  
 .banner-text p{
     font-size: 10px;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -251,7 +251,7 @@ h5{
 
 .banner-text h2 {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 15px;
 }
 .banner-text a {
@@ -259,10 +259,11 @@ h5{
     color: white;
     font-size: 15px;
     font-weight: regular;
+    font-weight: 500;
     }
     /*texto do banner*/
 
-.image-banner img {
+.image-banner {
         width: 100%; /* Ocupa toda a largura disponível */
         height: 100%; /* Faz a imagem cobrir toda a altura */
         object-fit: cover; /* Mantém a proporção correta sem distorcer */
