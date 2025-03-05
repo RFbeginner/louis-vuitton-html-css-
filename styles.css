@@ -269,9 +269,7 @@ h5{
         object-fit: cover; /* Mantém a proporção correta sem distorcer */
 }
 
-
 /*categorias*/ 
-
 
 .selection-section {
     padding: 50px 20px;
@@ -378,9 +376,6 @@ h5{
     max-width: 100%;
     height: auto;
 }
-
-
-
 
 /* Serviços */
 
@@ -526,7 +521,6 @@ h5{
 .bold {
     font-weight: bold;
 }
-
 
 /*Bottom Footer*/
 
