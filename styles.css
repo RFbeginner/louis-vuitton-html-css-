@@ -699,28 +699,21 @@ h5{
     color: #b6b6b6;
 }
 
-/* RESPONSIVIDADE */
-@media screen and (max-width: 1024px) {
-    .selection-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-}
-}
-
-@media screen and (max-width: 600px) {
-    .selection-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+@media screen and (max-width: 768px) {
+    .selection-grid, .selection-grid1 { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+        gap: 10px; /* Espaçamento entre os produtos */
+        justify-content: center;
+    }
+    
+    .selection-grid .product-box{
+        width: 100%;
+        text-align: center; /* Centraliza os produtos */
     }
 
-    .header {
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .left-section, .right-section {
-        flex-direction: row-reverse;
-        gap: 30px;
-        margin-top: 10px;
+    .selection-grid1 .product-box img {
+        max-width: 100%;
+        height: auto;
     }
 }
