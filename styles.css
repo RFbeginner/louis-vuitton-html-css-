@@ -4,11 +4,10 @@
     box-sizing: border-box;
     
     html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw; /* Garante que ocupe toda a largura */
-    overflow-x: hidden; /* Remove rolagem lateral */
-}
+        width: 100%;
+        overflow-x: hidden;
+        font-family: "Quicksand", sans-serif;
+    }
 
     
     /* Garante que tudo fique dentro da tela */
@@ -82,7 +81,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 50px;
+    padding: 15px 50px;
     background-color: white;
     border-bottom: 1px solid #ddd;
 }
@@ -94,33 +93,13 @@ body {
 }
 
 /* Ícone de usuário */
-.user-icon {
-    width: 18px; /* Define o tamanho do ícone */
-    height: 18px;
-    display: block;
-
-}
-.icon {
-    font-size: 18px;
-    position: relative;
-    cursor: pointer;
-}
-
-/* Ícone de usuário */
-.heart-icon {
-    width: 18px; /* Define o tamanho do ícone */
-    height: 18x;
-    display: block;
+.user-icon, .heart-icon {
+    width: 20px;
+    height: 20px;
 }
 .bag-icon-container {
     position: relative; /* Torna o contêiner um elemento de referência */
     display: inline-block;
-    width: 40px; /* Tamanho do contêiner */
-    height: 40px;
-}
-
-/* Estilo do ícone da bolsa */
-.bag-icon-container {
     width: 18px; /* Tamanho do contêiner da bolsa */
     height: 18px;
 }
@@ -237,13 +216,13 @@ h5{
 }
     /*texto do banner*/
 .banner-text {
+    text-align: center;
     position: absolute;
-    top: 85%; /* Ajuste conforme necessário */
+    top: 75%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o texto */
-    color: white; /* Cor do texto */
-    z-index: 1; /* Garante que o texto fique acima da imagem */
-}
+    transform: translate(-50%, -50%);
+    color: white;
+    }
  
 .banner-text p{
     font-size: 10px;
@@ -290,8 +269,8 @@ h5{
 .selection-grid {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -333,13 +312,12 @@ h5{
 /* Estilização das categorias */
 .category {
     text-align: center;
-    width: 280px; /* Tamanho fixo das imagens */
+    width: 250px;
 }
 
 .category img {
-    width: 105%;
+    width: 100%;
     height: auto;
-        
 }
 
 /* Estilização do texto abaixo das imagens */
@@ -360,7 +338,7 @@ h5{
     justify-content: center;
     align-items: center;
 }
-.collection .Malas {
+.collection .Malas, .collection .Bolsas {
     width: 100vw;  /* Garante que ocupa toda a largura da viewport */
     height: 100%;  /* Mantém a proporção correta */
     object-fit: cover; /* Faz a imagem cobrir a tela sem distorcer */
@@ -528,15 +506,13 @@ h5{
     justify-content: space-between;
     max-width: 1000px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    
+    flex-wrap: wrap;
 }
 
 /* Cada coluna do rodapé */
 .footer-column {
-    width: 23%; /* Cada coluna ocupa 23% do espaço */
-    min-width: 230px; /* Evita que fique muito pequena */
-    
+    width: 23%;
+    min-width: 230px;
 }
 
 /* Estilo dos títulos das colunas */
@@ -699,21 +675,214 @@ h5{
     color: #b6b6b6;
 }
 
-@media screen and (max-width: 768px) {
-    .selection-grid, .selection-grid1 { 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-        gap: 10px; /* Espaçamento entre os produtos */
-        justify-content: center;
-    }
-    
-    .selection-grid .product-box{
-        width: 100%;
-        text-align: center; /* Centraliza os produtos */
+/* 🔹 Ajuste para telas grandes (1440px ou menos) */
+@media (max-width: 1440px) {
+    .container {
+        max-width: 90%;
     }
 
-    .selection-grid1 .product-box img {
-        max-width: 100%;
-        height: auto;
+    .product-box {
+        width: 220px;  /* Reduz um pouco para telas grandes */
+        height: 300px;
     }
 }
+
+/* 🔹 Ajuste para telas médias (1024px ou menos) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .selection-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        gap: 12px;
+    }
+
+    .product-box {
+        width: 190px;  /* Reduz tamanho proporcionalmente */
+        height: 260px;
+    }
+}
+
+/* 🔹 Ajuste do banner e textos para telas menores (768px ou menos) */
+@media (max-width: 768px) {
+    .banner-container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .banner-text {
+        top: 70%;
+        width: 90%;
+        text-align: center;
+    }
+
+    .banner-text h2 {
+        font-size: 18px;
+    }
+
+    /* Grid de produtos ajustado para 2 colunas */
+    .selection-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .product-box {
+        width: 160px;  /* Reduzindo ainda mais */
+        height: 220px;
+    }
+}
+
+/* 🔹 Ajuste para telas grandes (1440px ou menos) */
+@media (max-width: 1440px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .category {
+        width: 220px;  /* Reduzindo proporcionalmente */
+    }
+
+    .product-box {
+        width: 220px;
+        height: 300px;
+    }
+}
+
+/* 🔹 Ajuste para telas médias (1024px ou menos) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .right-section {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .selection-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .category {
+        width: 190px;  /* Diminui junto */
+    }
+
+    .product-box {
+        width: 190px;
+        height: 260px;
+    }
+}
+
+/* 🔹 Ajuste do banner e textos para telas menores (768px ou menos) */
+@media (max-width: 768px) {
+    .banner-container {
+        height: auto;
+        padding: 0px;
+    }
+
+    .banner-text {
+        top: 70%;
+        width: 90%;
+        text-align: center;
+    }
+
+    .banner-text h2 {
+        font-size: 18px;
+    }
+
+    /* Grid de produtos ajustado para 2 colunas */
+    .selection-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .category {
+        width: 180px;  /* Diminui junto */
+    }
+
+    .product-box {
+        width: 180px;
+        height: 220px;
+    }
+}
+
+/* 🔹 Ajuste para telas pequenas (400px ou menos) */
+@media (max-width: 400px) {
+    .selection-grid {
+        grid-template-columns: 1fr; /* Apenas 1 coluna */
+    }
+
+    .banner-text h2 {
+        font-size: 16px;
+    }
+
+    .category {
+        width: 140px;  /* Continua diminuindo */
+    }
+
+    .product-box {
+        width: 140px;
+        height: 200px;
+    }
+}
+
+/* 🔹 Ajuste do rodapé para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 🔹 Ajuste geral para telas menores (600px ou menos) */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .banner-text {
+        width: 100%;
+    }
+
+    .selection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .category {
+        width: 130px;  /* Ajustado para diminuir em telas pequenas */
+    }
+
+   
+}
+
