@@ -515,13 +515,13 @@ h5{
 }
 
 /* Cada coluna do rodapé */
-.footer-column {
+.footer-column, .footer-column1, .footer-column2, .footer-column3 {
     width: 23%;
     min-width: 230px;
 }
 
 /* Estilo dos títulos das colunas */
-.footer-column h3 {
+.footer-column h3, .footer-column1 h3,.footer-column4 h3, .footer-column3 h3 {
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -529,8 +529,9 @@ h5{
     font-weight:1000;
 }
 
+
 /* Parágrafos e links */
-.footer-column p {
+.footer-column p, .footer-column1 p, .footer-column4 p, .footer-column3 p {
     font-size: 12px;
     color: #333;
     margin-bottom: 15px;
@@ -538,7 +539,7 @@ h5{
     font-weight: 500;
 }
 
-.footer-column a {
+.footer-column a, .footer-column1 a, .footer-column4 a, .footer-column3 a {
     color: rgb(112, 111, 111);
     text-decoration: underline;
     letter-spacing: 1px;
@@ -547,17 +548,17 @@ h5{
 
 
 /* Estilização da lista */
-.footer-column ul {
+.footer-column ul, .footer-column1 ul, .footer-column4 ul, .footer-column3 ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-column ul li {
+.footer-column ul li, .footer-column1 ul li, .footer-column4 ul li, .footer-column3 ul li {
     margin-bottom: 8px;
     font-size: 30px;
 }
 
-.footer-column ul li a {
+.footer-column ul li a, .footer-column1 ul li a, .footer-column4 ul li a, .footer-column3 ul li a {
     font-size: 12px;
 }
 
@@ -761,6 +762,10 @@ h5{
     .product-box {
         width: 140px;
         height: 200px;
+    }
+    .textserviços p, .textserviços a {
+        font-size: smaller;
+    
     }
 }
 
