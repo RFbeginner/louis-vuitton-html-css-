@@ -1,4 +1,4 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -200,9 +200,15 @@ h5{
 
 /*banner*/ 
 
+
 .container {
-    text-align: center; /* Alinha texto ou elementos internos ao centro */
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens na vertical */
+    justify-content: center; /* Centraliza os itens na horizontal */
+    width: 100%; /* Garante que a largura se ajuste ao container */
+    }
+
 
 .banner-container {
     text-align: center; /* Centraliza o texto */
@@ -303,7 +309,7 @@ h5{
 .selection-grid {
     display: flex;
     justify-content: center;
-    gap: 26px;
+    gap: 20px;
     flex-wrap: wrap; /* Permite ajuste automático para telas menores */
     max-width: 1200px;
     margin: 0 auto;
@@ -312,7 +318,7 @@ h5{
 /* Estilização das categorias */
 .category {
     text-align: center;
-    width: 250px;
+    width: 280px;
 }
 
 .category img {
@@ -386,18 +392,20 @@ h5{
 
 /*botão das categorias*/
 
-.button {
-    display: flex;
-    margin-top: 30px;
+.button { 
+    display: inline-flex; /* Mantém o botão apenas no tamanho do conteúdo */
     justify-content: center;
     align-items: center;
-    padding: 15px 30px;
-    border: 1px solid #333; /* Mantém a borda */
-    border-radius: 40px; /* Borda arredondada */
-    color: #333; /* Cor do texto */
+    padding: 10px 30px;
+    border: 1px solid #333;
+    border-radius: 40px;
+    color: #333;
     font-size: 16px;
     font-family: afacad-flux;
+    text-align: center;
+    margin-top: 30px; /* Dá um espaçamento do grid de produtos */
 }
+
 .button:hover {
     border-width: 2px; /* Espessura da borda ao passar o mouse */
     transition-duration: 0,5s; /* Tempo da transição */
@@ -706,7 +714,7 @@ h5{
     }
 
     .selection-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        grid-template-columns: repeat(4, 1fr); /* 3 colunas */
         gap: 12px;
     }
 
@@ -714,6 +722,8 @@ h5{
         width: 190px;  /* Reduz tamanho proporcionalmente */
         height: 260px;
     }
+
+    
 }
 
 /* 🔹 Ajuste do banner e textos para telas menores (768px ou menos) */
@@ -782,7 +792,7 @@ h5{
     }
 
     .selection-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 12px;
     }
 
@@ -816,8 +826,8 @@ h5{
     /* Grid de produtos ajustado para 2 colunas */
     .selection-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        width: 160px;
         justify-items: center;
     }
 
@@ -829,12 +839,13 @@ h5{
         width: 180px;
         height: 220px;
     }
+    
 }
 
 /* 🔹 Ajuste para telas pequenas (400px ou menos) */
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .selection-grid {
-        grid-template-columns: 1fr; /* Apenas 1 coluna */
+        grid-template-columns: repeat (2fr, 1); 
     }
 
     .banner-text h2 {
@@ -854,7 +865,6 @@ h5{
 /* 🔹 Ajuste do rodapé para telas menores */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
         text-align: center;
     }
 }
@@ -870,10 +880,7 @@ h5{
         width: 100%;
     }
 
-    .selection-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+    
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -882,7 +889,7 @@ h5{
     .category {
         width: 130px;  /* Ajustado para diminuir em telas pequenas */
     }
+    
 
    
 }
-
