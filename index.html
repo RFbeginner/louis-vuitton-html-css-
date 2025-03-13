@@ -173,10 +173,10 @@
             </div>
         </div>
 
-        <div class="button">
-            <button>Explorar a Seleção</button>
-        </div>
-        </div>
+    </div>
+    <div class="explore-button">
+        <button>Explorar a Seleção</button>
+    </div>
     </section>
     <!--Acessórios de Verão-->
     <section class="collection">
@@ -234,10 +234,10 @@
             <h4>R$3.400,00</h4>
         </div>
         </div>
-        <div class="button">
-            <button>Explorar a Seleção</button>
-        </div>
-        </div>
+    </div>
+    <div class="explore-button">
+        <button>Explorar a Seleção</button>
+    </div>
     </section>
 </body>
     <!--Nossos Serviços-->
@@ -268,55 +268,54 @@
     <footer class="footer">
         <div class="hr"><hr> </div>
         <div class="footer-container">
+    
             <!-- Coluna 1 -->
-        <div class="footer-column">
-            <h3>Ajuda</h3>                     
-            <p>Nossos Client Advisors estão disponíveis para ajudar com quaisquer dúvidas ou solicitações por telefone 
-            <a href="tel:+5541XXXX-XXXXX"> +55 (41) XXXX-XXXXX</a>, ou
-            <a href="mailto:suporte@email.com">suporte@email.com</a>.
-            </p>
-            <ul>
-            <li><a href="#Perguntas Frequentes">Perguntas Frequentes</a></li>
-            <li><a href="#Cuidados com o Produto">Cuidados com o Produto</a></li>
-            <li><a href="#Lojas">Lojas</a></li>
-            </ul>
+            <div class="footer-column">
+                <h3>Ajuda</h3>                     
+                <ul>
+                    <li><a href="#Perguntas Frequentes">Perguntas Frequentes</a></li>
+                    <li><a href="#Cuidados com o Produto">Cuidados com o Produto</a></li>
+                    <li><a href="#Lojas">Lojas</a></li>
+                </ul>
+            </div>
+    
+            <!-- Coluna 2 -->
+            <div class="footer-column">
+                <h3>Serviços</h3>
+                <ul>
+                    <li><a href="#Reparos">Reparos</a></li>
+                    <li><a href="#Personalização">Personalização</a></li>
+                    <li><a href="#Arte de Presentear">A Arte de Presentear</a></li>
+                    <li><a href="#Novos Aplicativos">Baixe os Nossos Aplicativos</a></li>
+                </ul>
+            </div>
+    
+            <!-- Coluna 3 -->
+            <div class="footer-column">
+                <h3>Sobre a Louis Vuitton</h3>
+                <ul>
+                    <li><a href="#Desfiles">Desfiles</a></li>
+                    <li><a href="#Arte e Cultura">Arte e Cultura</a></li>
+                    <li><a href="#Maison">A Maison</a></li>
+                    <li><a href="#Sustentabilidade">Sustentabilidade</a></li>
+                    <li><a href="#Notícias">Últimas Notícias</a></li>
+                    <li><a href="#Carreiras">Carreiras</a></li>
+                    <li><a href="#Fundação">Louis Vuitton Foundation</a></li>
+                </ul>
+            </div>
+    
+            <!-- Coluna 4 -->
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <ul>
+                    <li><a href="#Inscreva-se">Inscreva-se para receber novidades</a></li>
+                    <li><a href="#">Siga a Louis Vuitton nas Redes Sociais</a></li>
+                </ul>
+            </div>
+    
         </div>
-
-        <!-- Coluna 2-->
-        <div class="footer-column1">
-            <h3>Serviços</h3>
-            <ul>
-            <li><a href="#Reparos">Reparos</a></li>
-            <li><a href="#Personalização">Personalização</a></li>
-            <li><a href="#Arte de Presentear">A Arte de Presentear</a></li>
-            <li><a href="#Novos Aplicativos">Baixe os Nossos Aplicativos</a></li>
-            </ul>
-        </div>
-
-        <!-- Coluna 3!-->
-        <div class="footer-column4">
-            <h3>Sobre a Louis Vuitton</h3>
-            <ul>
-            <li><a href="#Desfiles">Desfiles</a></li>
-            <li><a href="#Arte e Cultura">Arte e Cultura</a></li>
-            <li><a href="#Maison">A Maison</a></li>
-            <li><a href="#Sustentabilidade">Sustentabilidade</a></li>
-            <li><a href="#Notícias">Últimas Notícias</a></li>
-            <li><a href="#Carreiras">Carreiras</a></li>
-            <li><a href="#Fundação">Louis Vuitton Foundation</a></li>
-            </ul>
-        </div>
-
-        <!--Coluna 4!-->
-        <div class="footer-column3">
-            <h3>Newsletter</h3>
-            <p>
-            <a href="#Inscreva-se">Inscreva-se</a> para receber e-mails Louis Vuitton e receba as últimas notícias da Maison, incluindo pré-lançamentos exclusivos online e novas coleções.
-            </p>
-            <p><a href="#">Siga a Louis Vuitton nas Redes Sociais</a></p>
-        </div>
-           
     </footer>
+    
     <!-- Rodapé Inferior -->
     <div class="footer-bottom">
         <div class="hr"><hr></div>
@@ -346,5 +345,18 @@
     </div>
     </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let footers = document.querySelectorAll(".footer-column h3");
+        
+            footers.forEach((header) => {
+                header.addEventListener("click", function () {
+                    let list = this.nextElementSibling;
+                    list.classList.toggle("open");
+                });
+            });
+        });
+    </script>
+        
 </body>
 </html>

@@ -337,7 +337,7 @@ h5{
 .category a img {
     width: 100%; /* Faz a imagem ocupar todo o espaço do link */
     height: auto;
-    display: block; /* Evita espaços extras em imagens */
+    display: block; /* Evita espaços extras abaixo da imagem */
 }
 
 .product-box {
@@ -425,9 +425,25 @@ h5{
     text-align: center;
 }
 
+.explore-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 
+.explore-button button {
+    padding: 10px 30px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+}
 
-
+.explore-button button:hover {
+    background-color: #333;
+}
 
 /* Serviços */
 
@@ -709,7 +725,7 @@ h5{
         gap: 15px;
     }
     .selection-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        grid-template-columns: repeat(4, 1fr); /* 3 colunas */
     }
     .category {
         width: 190px;
@@ -748,7 +764,8 @@ h5{
     }
     .footer-container {
         flex-direction: column;
-        text-align: center;
+        
+}
 }
 
 /* Ajuste para celulares pequenos */
@@ -783,4 +800,156 @@ h5{
         height: 180px;
     }
 }
+
+/* 🔹 Ajuste do rodapé para telas menores */
+@media (max-width: 768px) {
+    .footer-bottom {
+        display: flex;
+        flex-direction: column; /* Organiza os elementos em coluna */
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-bottom-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .country-selector {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px; /* Espaço entre os elementos */
+        margin-bottom: 10px;
+    }
+
+    .country-selector p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .mapa-privacidade-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    .mapa-privacidade-container ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .location {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    .logofooter h2 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+}
+
+/* 🔹 Ajuste para telas ainda menores (480px ou menos) */
+@media (max-width: 480px) {
+    .country-selector {
+        flex-direction: row; /* Deixa os elementos um abaixo do outro */
+        gap: 5px;
+        margin-right: 1px;
+    }
+
+    .mapa-privacidade-container {
+        flex-direction: row;
+        margin-right: 10px;
+        gap:20px;
+    }
+
+    .location p {
+        font-size: 10px;
+        margin-left: 50px;
+        
+    }
+
+    .logofooter h2 {
+        font-size: 16px;
+    }
+}
+/* 🔹 Roll-Down Footer para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 2px;
+    }
+
+    .footer-column {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    .footer-column h3 {
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f8f8f8;
+    }
+
+    .footer-column ul {
+        list-style: none; /* Remove marcadores da lista */
+        padding: 0;
+        margin: 0;
+        display: none; /* Esconde o conteúdo inicialmente */
+    }
+
+    .footer-column ul.open {
+        display: block; /* Exibe quando aberto */
+        padding: 5px;
+    }
+
+    .footer-column h3::after {
+        content: "▼"; /* Ícone de seta para baixo */
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    .footer-column h3.open::after {
+        transform: rotate(180deg); /* Rotaciona a seta para cima quando aberto */
+    }
+}
+@media (max-width: 800px) {
+    .location {
+        text-align: center; /* Centraliza o texto */
+        margin: 10px auto; /* Ajusta a margem para alinhar corretamente */
+        padding: 1px; /* Adiciona um pequeno espaçamento lateral */
+        margin-left: 20px;
+    }
+
+    .location p {
+        text-align: center; /* Garante que o texto fique centralizado */
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    .location p {
+        font-size: 10px; /* Reduz ainda mais para telas pequenas */
+    }
 }
