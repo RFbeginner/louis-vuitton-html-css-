@@ -896,7 +896,7 @@ h5{
         transform: rotate(180deg); /* Rotaciona a seta para cima quando aberto */
     }
 }
-}
+
 
 /* 🔹 Ajuste para telas ainda menores (480px ou menos) */
 @media (max-width: 480px) {
