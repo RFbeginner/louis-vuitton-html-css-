@@ -953,3 +953,47 @@ h5{
         font-size: 10px; /* Reduz ainda mais para telas pequenas */
     }
 }
+/* 🔹 Ajuste para telas muito grandes (acima de 1440px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1300px; /* Limita a largura para evitar esticamento excessivo */
+        margin: 0 auto; /* Centraliza o conteúdo */
+    }
+
+    .header {
+        padding: 20px 80px; /* Ajusta espaçamento para telas maiores */
+    }
+
+    .banner-container {
+        height: 700px; /* Banner mais alto para preencher melhor */
+    }
+
+    .banner-text h2 {
+        font-size: 35px; /* Aumenta o tamanho do título */
+    }
+
+    .selection-grid {
+        grid-template-columns: repeat(4, 1fr); /* Exibe 5 colunas para aproveitar o espaço */
+    }
+
+    .category {
+        width: 250px; /* Aumenta o tamanho das categorias */
+    }
+
+    .product-box {
+        width: 250px;
+        height: 350px;
+    }
+
+    .footer-container {
+        max-width: 1200px; /* Mantém o rodapé proporcional */
+    }
+
+    .footer-column {
+        width: 20%; /* Distribui melhor o espaço */
+    }
+
+    .location p {
+        font-size: 14px; /* Melhora a leitura em telas grandes */
+    }
+}
